@@ -1,0 +1,14 @@
+{
+  "name": "proctor-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/web dev",
+    "build": "bun run --cwd packages/proctor build && bun run --cwd apps/web build",
+    "test": "bun test"
+  }
+}
